@@ -26,9 +26,9 @@
           {{- if $len -}}
             <strong><a href="{{index $urls 0}}">{{$key}}</a></strong>
             {{- if eq $len 2 -}}
-              (<a href="{{index $urls 1}}">その他</a>)
+              &nbsp;(<a href="{{index $urls 1}}">その他</a>)
             {{- else if gt $len 2 -}}
-              (
+              &nbsp;(
               {{- range $i, $url := $urls}}
                 {{- if $i -}}
                   {{- if ne $i 1 -}}, {{end -}}
