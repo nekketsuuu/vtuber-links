@@ -2,6 +2,8 @@
 
 Links to VTubers
 
+See <https://nekketsuuu.github.io/vtuber-links/>
+
 ## Generate pages
 
 ```sh
