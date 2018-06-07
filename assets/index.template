@@ -16,14 +16,14 @@
     {{with (index . "にじさんじ")}}
       {{range .}}
       <li>
-	{{if .Value.HasKey "Twitter"}}
-          <a href="{{.Value.Find "Twitter"}}">{{.Key}}</a>:&nbsp;
+	{{if .Value.HasKey "Profile"}}
+          <a href="{{.Value.Find "Profile"}}">{{.Key}}</a>:&nbsp;
         {{else}}
           {{.Key}}:&nbsp;
         {{end}}
-        {{with .Value}}{{range .}}{{if ne .Key "Twitter"}}
-          <a href="{{.Value}}">{{.Key}}</a>,
-        {{end}}{{end}}{{end}}
+        {{with $lives := .Value.Find "Lives"}}
+          {{range $i, $kv := $lives}}{{if $i}}, {{end}}<a href="{{$kv.Value}}">{{$kv.Key}}</a>{{end}}
+        {{end}}
       </li>
       {{end}}
     {{end}}
