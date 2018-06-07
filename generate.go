@@ -76,7 +76,12 @@ func main() {
 	check(err)
 	defer output.Close()
 
-	tpl, err := template.ParseFiles(indexTpl)
+	funcs := template.FuncMap{
+		"noescape": func(html string) template.HTML {
+			return template.HTML(html)
+		},
+	}
+	tpl, err := template.New(filepath.Base(indexTpl)).Funcs(funcs).ParseFiles(indexTpl)
 	check(err)
 	err = tpl.Execute(output, db)
 	check(err)

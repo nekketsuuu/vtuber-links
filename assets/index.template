@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>自分用バーチャルライバー生配信先まとめ</title>
-  <!--[if lt IE 9]>
+  {{noescape `<!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
+  <![endif]-->`}}
 </head>
 <body>
 <h1 id="title">自分用バーチャルライバー生配信先まとめ</h1>
