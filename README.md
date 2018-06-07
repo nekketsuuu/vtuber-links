@@ -4,7 +4,7 @@ Links to VTubers
 
 See <https://nekketsuuu.github.io/vtuber-links/>
 
-## Generate pages
+## Generate a page
 
 ```sh
 go run generate.go
