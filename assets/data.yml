@@ -176,7 +176,9 @@
       YouTube: https://www.youtube.com/channel/UCKMYISTJAQ8xTplUPHiABlA/live
       Mirrativ: https://www.mirrativ.com/user/3261125
   '安土桃':
-    Profile: https://twitter.com/momo_aduchi
+    Profile:
+      - https://twitter.com/momo_aduchi
+      - https://twitter.com/adcmm0303
     Lives:
       YouTube: https://www.youtube.com/channel/UC6TfqY40Xt1Y0J-N18c85qQ/live
   '漆黒の捕食者D.E. ☪鈴木勝':

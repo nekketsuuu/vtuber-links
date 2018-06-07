@@ -18,7 +18,26 @@
       {{range .}}
       <li>
 	{{if .Value.HasKey "Profile"}}
-          <strong><a href="{{.Value.Find "Profile"}}">{{.Key}}</a></strong>:&nbsp;
+          {{if .Value.IsSingleValue "Profile"}}
+            <strong><a href="{{.Value.Find "Profile"}}">{{.Key}}</a></strong>:&nbsp;
+          {{else}}
+            {{$key := .Key}}
+            {{$urls := .Value.Find "Profile"}}
+            {{$len := len $urls}}
+            {{if $len}}
+              <strong><a href="{{index $urls 0}}">{{$key}}</a></strong>
+              {{if eq $len 2}}
+                (<a href="{{index $urls 1}}">その他</a>)
+              {{else if gt $len 2}}
+                (
+                {{range $i, $url := $urls}}{{if $i}}{{if ne $i 1}}, {{end}}<a href="{{$url}}">{{if eq $i 1}}その他{{end}}{{$i}}</a>{{end}}{{end}}
+                )
+              {{end}}
+            {{else}}
+              <strong>{{$key}}</strong>
+            {{end}}
+            :&nbsp;
+          {{end}}
         {{else}}
           <strong>{{.Key}}</strong>:&nbsp;
         {{end}}

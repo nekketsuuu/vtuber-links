@@ -1,13 +1,14 @@
 package main
 
 import (
-	"errors"
 	"html/template"
 	"io/ioutil"
 	"log"
 	"os"
 	"path/filepath"
+	"reflect"
 
+	"github.com/pkg/errors"
 	"gopkg.in/yaml.v2"
 )
 
@@ -31,7 +32,7 @@ func (ms MapSlice) HasKey(name string) bool {
 }
 
 // Find returns a value of a key `key` if exists.
-// Otherwise, Find returns an error.
+// Otherwise, it throws an error.
 func (ms MapSlice) Find(key string) (interface{}, error) {
 	for _, mi := range ms {
 		if k, ok := mi.Key.(string); ok && k == key {
@@ -41,7 +42,21 @@ func (ms MapSlice) Find(key string) (interface{}, error) {
 	return nil, errors.New("MapSlice.Find: cannot find a key '" + key + "'")
 }
 
-// DB represents the structure of data.yml
+// IsSingleValue returns false if a value of a key `key` is a slice or an array.
+// If it's not, then returns true.
+// If the key doesn't exist, IsSingleValue throws an error.
+func (ms MapSlice) IsSingleValue(key string) (bool, error) {
+	val, err := ms.Find(key)
+	if err != nil {
+		return false, errors.Wrap(err, "MapSlice.IsSingleValue: ")
+	}
+	if k := reflect.ValueOf(val).Kind(); k == reflect.Slice || k == reflect.Array {
+		return false, nil
+	}
+	return true, nil
+}
+
+// DB represents the structure of `data.yml`.
 type DB map[string]MapSlice
 
 func check(err error) {
