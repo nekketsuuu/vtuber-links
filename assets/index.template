@@ -14,16 +14,16 @@
   <li>にじさんじ: <a href="https://wikiwiki.jp/nijisanji/">非公式 wiki</a></li>
   <ul>
     {{with (index . "にじさんじ")}}
-      {{range $person, $sites := .}}
+      {{range .}}
       <li>
-        {{if (index $sites "Twitter")}}
-          <a href="{{index $sites "Twitter"}}">{{$person}}</a>
+	{{if .Value.HasKey "Twitter"}}
+          <a href="{{.Value.Find "Twitter"}}">{{.Key}}</a>:&nbsp;
         {{else}}
-          {{$person}}
-        {{end}}:&nbsp;
-        {{range $site, $url := $sites}}
-          <a href="{{$url}}">{{$site}}</a>,
+          {{.Key}}:&nbsp;
         {{end}}
+        {{with .Value}}{{range .}}{{if ne .Key "Twitter"}}
+          <a href="{{.Value}}">{{.Key}}</a>,
+        {{end}}{{end}}{{end}}
       </li>
       {{end}}
     {{end}}

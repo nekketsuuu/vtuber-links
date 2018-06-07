@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"html/template"
 	"io/ioutil"
 	"log"
@@ -16,11 +17,32 @@ var (
 	indexHtml = filepath.Join("docs", "index.html")
 )
 
-type (
-	Site   map[string]string
-	Person map[string]Site
-	DB     map[string]Person
-)
+// MapSlice is a wrapper of yaml.MapSlice
+type MapSlice yaml.MapSlice
+
+// HasKey checks whether the slice contains a key named `name`
+func (ms MapSlice) HasKey(name string) bool {
+	for _, mi := range ms {
+		if key, ok := mi.Key.(string); ok && key == name {
+			return true
+		}
+	}
+	return false
+}
+
+// Find returns a value of a key `key` if exists.
+// Otherwise, Find returns an error.
+func (ms MapSlice) Find(key string) (interface{}, error) {
+	for _, mi := range ms {
+		if k, ok := mi.Key.(string); ok && k == key {
+			return mi.Value, nil
+		}
+	}
+	return nil, errors.New("MapSlice.Find: cannot find a key '" + key + "'")
+}
+
+// DB represents the structure of data.yml
+type DB map[string]MapSlice
 
 func check(err error) {
 	if err != nil {
