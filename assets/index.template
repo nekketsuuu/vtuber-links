@@ -12,7 +12,7 @@
 <h1 id="title">バーチャルライバー生配信先自分用まとめ</h1>
 <p>敬称略</p>
 <ul>
-  <li>にじさんじ: <a href="https://wikiwiki.jp/nijisanji/">非公式 wiki</a></li>
+  <li>にじさんじ: <a href="https://twitter.com/nijisanji_app">公式 Twitter</a>, <a href="https://twitter.com/NijisanjiGamers">ゲーマーズ Twitter</a>, <a href="https://twitter.com/Nijisanji_Seeds">SEEDs Twitter</a>, <a href="https://wikiwiki.jp/nijisanji/">非公式 wiki</a></li>
   <ul>
     {{- with (index . "にじさんじ") -}}{{- range .}}
     <li>
