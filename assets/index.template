@@ -10,6 +10,7 @@
 </head>
 <body>
 <h1 id="title">自分用バーチャルライバー生配信先まとめ</h1>
+<p>敬称略</p>
 <ul>
   <li>にじさんじ: <a href="https://wikiwiki.jp/nijisanji/">非公式 wiki</a></li>
   <ul>
@@ -17,9 +18,9 @@
       {{range .}}
       <li>
 	{{if .Value.HasKey "Profile"}}
-          <a href="{{.Value.Find "Profile"}}">{{.Key}}</a>:&nbsp;
+          <strong><a href="{{.Value.Find "Profile"}}">{{.Key}}</a></strong>:&nbsp;
         {{else}}
-          {{.Key}}:&nbsp;
+          <strong>{{.Key}}</strong>:&nbsp;
         {{end}}
         {{with $lives := .Value.Find "Lives"}}
           {{range $i, $kv := $lives}}{{if $i}}, {{end}}<a href="{{$kv.Value}}">{{$kv.Key}}</a>{{end}}
