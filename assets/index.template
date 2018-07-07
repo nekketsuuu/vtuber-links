@@ -46,8 +46,8 @@
       {{- end -}}
       :&nbsp;
 
-      {{- with $lives := .Value.Find "Lives" -}}
-        {{- range $i, $kv := $lives -}}
+      {{- with $links := .Value.Find "Links" -}}
+        {{- range $i, $kv := $links -}}
           {{- if $i -}}, {{end -}}
           <a href="{{$kv.Value}}">{{$kv.Key}}</a>
         {{- end -}}
