@@ -1,0 +1,61 @@
+{{/*
+   * ShowProfile prints name with link if it exists.
+   * Call with my `dict` function.
+   */}}
+{{- define "ShowProfile" -}}
+  {{/* Actually, both types of .Text and .Attrs are interface{}. */}}
+  {{- if .Attrs.HasKey "Profile" -}}
+    {{- if .Attrs.IsSingleValue "Profile" -}}
+      <a href="{{ .Attrs.Find "Profile" }}">{{ .Text }}</a>
+    {{- else -}}
+      {{- $urls := .Attrs.Find "Profile" -}}
+      {{- $len := len $urls -}}
+      {{- if $len -}}
+        <a href="{{ index $urls 0 }}">{{ .Text }}</a>
+        {{- if eq $len 2 -}}
+          &nbsp;(<a href="{{ index $urls 1 }}">その他</a>)
+        {{- else if gt $len 2 -}}
+          &nbsp;(
+          {{- range $i, $url := $urls }}
+            {{- if $i -}}
+              {{- if ne $i 1 -}}, {{end -}}
+              <a href="{{ $url }}">{{ if eq $i 1 }}その他{{ end }}{{ $i }}</a>
+            {{- end -}}
+          {{ end -}}
+          )
+        {{- end -}}
+      {{- else -}}
+        {{ .Text }}
+      {{- end -}}
+    {{- end -}}
+  {{- else -}}
+    {{ .Text }}
+  {{- end -}}
+{{- end -}}
+
+{{/* ShowTree prints a tree structure defined by a yaml file */}}
+{{- define "ShowTree" -}}
+  {{- if .HasKey "Links" -}}
+  {{- else -}}
+    {{- range $item := . }}
+      {{- $child := $item.Value -}}
+      {{- if $child.HasKey "Links" }}
+        <li>
+          <strong>{{ template "ShowProfile" dict "Text" .Key "Attrs" $child }}</strong>
+          {{- with $links := $child.Find "Links" -}}
+            {{- range $i, $kv := $links -}}
+              {{- if $i -}}, {{ else }}:&nbsp;{{ end }}<a href="{{ $kv.Value }}">{{ $kv.Key }}</a>
+            {{- end -}}
+          {{- end }}
+        </li>
+      {{- else }}
+        <li>
+          {{ .Key }}
+          <ul>
+            {{ template "ShowTree" .Value }}
+          </ul>
+        </li>
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

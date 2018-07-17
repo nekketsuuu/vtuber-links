@@ -4,57 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>バーチャルライバー生配信先自分用まとめ</title>
-  {{noescape `<!--[if lt IE 9]>
+  {{ noescape `<!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->`}}
+  <![endif]-->` }}
 </head>
 <body>
 <h1 id="title">バーチャルライバー生配信先自分用まとめ</h1>
 <p>敬称略</p>
 <ul>
-  <li>にじさんじ</li>
-  <ul>
-    {{- with (index . "にじさんじ") -}}{{- range .}}
+  {{/* type(.) is map[string]main.MapSlice */ -}}
+  {{- range $key, $value := . -}}
     <li>
-      {{if .Value.HasKey "Profile" -}}
-        {{- if .Value.IsSingleValue "Profile" -}}
-          <strong><a href="{{.Value.Find "Profile"}}">{{.Key}}</a></strong>
-        {{- else -}}
-          {{- $key := .Key -}}
-          {{- $urls := .Value.Find "Profile" -}}
-          {{- $len := len $urls -}}
-          {{- if $len -}}
-            <strong><a href="{{index $urls 0}}">{{$key}}</a></strong>
-            {{- if eq $len 2 -}}
-              &nbsp;(<a href="{{index $urls 1}}">その他</a>)
-            {{- else if gt $len 2 -}}
-              &nbsp;(
-              {{- range $i, $url := $urls}}
-                {{- if $i -}}
-                  {{- if ne $i 1 -}}, {{end -}}
-                  <a href="{{$url}}">{{if eq $i 1}}その他{{end}}{{$i}}</a>
-                {{- end -}}
-              {{end -}}
-              )
-            {{- end -}}
-          {{- else -}}
-            <strong>{{$key}}</strong>
-          {{- end -}}
-        {{- end -}}
-      {{- else -}}
-        <strong>{{.Key}}</strong>
-      {{- end -}}
-      :&nbsp;
-
-      {{- with $links := .Value.Find "Links" -}}
-        {{- range $i, $kv := $links -}}
-          {{- if $i -}}, {{end -}}
-          <a href="{{$kv.Value}}">{{$kv.Key}}</a>
-        {{- end -}}
-      {{- end}}
+      {{ template "ShowProfile" dict "Text" $key "Attrs" $value }}
+      <ul>{{ template "ShowTree" $value }}</ul>
     </li>
-    {{- end -}}{{- end}}
-  </ul>
+  {{- end }}
 </ul>
 </body>
 </html>

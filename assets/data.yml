@@ -1,16 +1,23 @@
 'にじさんじ':
-  '団体':
-    Links:
-      'にじさんじ Twitter': https://twitter.com/nijisanji_app
-      'ゲーマーズ Twitter': https://twitter.com/NijisanjiGamers
-      'SEEDs Twitter': https://twitter.com/Nijisanji_Seeds
-      'VOIZ Twitter': https://twitter.com/voiz_official
-      'にじさんじ YouTube': https://www.youtube.com/channel/UCX7YkU9nEeaoZbkVLVajcMg/live
-      'にじさんじニコニコ': http://www.nicovideo.jp/user/82754677
-      'にじさんじ Mirrativ': https://www.mirrativ.com/user/1927759
-      'いちから Twitter': https://twitter.com/Ichikara_Inc
-      'いちから YouTube': https://www.youtube.com/channel/UCJRTA8RcxW_T_VbMg4vgLsw/live
-      '非公式 wiki': https://wikiwiki.jp/nijisanji/
+  'まとめ':
+    Twitter:
+      Links:
+        '一期二期': https://twitter.com/nijisanji_app
+        'ゲーマーズ': https://twitter.com/NijisanjiGamers
+        SEEDs: https://twitter.com/Nijisanji_Seeds
+        VOIZ: https://twitter.com/voiz_official
+    '非公式 wiki':
+      Profile: https://wikiwiki.jp/nijisanji/
+      Links:
+    'にじさんじ':
+      Links:
+        'YouTube': https://www.youtube.com/channel/UCX7YkU9nEeaoZbkVLVajcMg/live
+        'ニコニコ': http://www.nicovideo.jp/user/82754677
+        'Mirrativ': https://www.mirrativ.com/user/1927759
+    'いちから':
+      Links:
+        'Twitter': https://twitter.com/Ichikara_Inc
+        'YouTube': https://www.youtube.com/channel/UCJRTA8RcxW_T_VbMg4vgLsw/live
   'いわなが':
     Profile: https://twitter.com/iwataiki
     Links:

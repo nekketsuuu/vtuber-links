@@ -15,6 +15,7 @@ import (
 var (
 	dataYml   = filepath.Join("assets", "data.yml")
 	indexTpl  = filepath.Join("assets", "index.template")
+	defsTpl   = filepath.Join("assets", "defs.template")
 	indexHtml = filepath.Join("docs", "index.html")
 )
 
@@ -80,8 +81,24 @@ func main() {
 		"noescape": func(html string) template.HTML {
 			return template.HTML(html)
 		},
+		// The following function is originally written by tux21b on StackOverflow
+		// https://stackoverflow.com/a/18276968/5989200
+		"dict": func(values ...interface{}) (map[string]interface{}, error) {
+			if len(values)%2 != 0 {
+				return nil, errors.New("dict: number of arguments must be even")
+			}
+			dict := make(map[string]interface{}, len(values)/2)
+			for i := 0; i < len(values); i += 2 {
+				key, ok := values[i].(string)
+				if !ok {
+					return nil, errors.New("dict: keys must be strings")
+				}
+				dict[key] = values[i+1]
+			}
+			return dict, nil
+		},
 	}
-	tpl, err := template.New(filepath.Base(indexTpl)).Funcs(funcs).ParseFiles(indexTpl)
+	tpl, err := template.New(filepath.Base(indexTpl)).Funcs(funcs).ParseFiles(indexTpl, defsTpl)
 	check(err)
 	err = tpl.Execute(output, db)
 	check(err)
