@@ -26,7 +26,9 @@
         Twitter: https://twitter.com/Ichikara_Inc
         YouTube: https://www.youtube.com/channel/UCJRTA8RcxW_T_VbMg4vgLsw/live
   'いわなが':
-    Profile: https://twitter.com/iwataiki
+    Profile:
+      - https://twitter.com/iwataiki
+      - https://twitter.com/iwanagame
     Links:
       YouTube: https://www.youtube.com/channel/UCGCb4Dts1uYtciya3wvd6dg/live
       Mirrativ: https://www.mirrativ.com/user/2493817
