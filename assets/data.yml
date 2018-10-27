@@ -5,13 +5,13 @@
         '一期二期': https://twitter.com/nijisanji_app
         'ゲーマーズ': https://twitter.com/NijisanjiGamers
         SEEDs: https://twitter.com/Nijisanji_Seeds
-        VOIZ: https://twitter.com/voiz_official
+        'VOIZ (リンク切れ)': https://twitter.com/voiz_official
     'リスト':
       Links:
         '一期二期': https://twitter.com/nijisanji_app/lists/list1
         'ゲーマーズ': https://twitter.com/NijisanjiGamers/lists/list
         SEEDs: https://twitter.com/Nijisanji_Seeds/lists/seeds
-        VOIZ: https://twitter.com/voiz_official/lists/voiz
+        'VOIZ (リンク切れ)': https://twitter.com/voiz_official/lists/voiz
     '非公式 wiki':
       Profile: https://wikiwiki.jp/nijisanji/
       Links:
@@ -21,6 +21,7 @@
         YouTube: https://www.youtube.com/channel/UCX7YkU9nEeaoZbkVLVajcMg/live
         'ニコニコ': http://www.nicovideo.jp/user/82754677
         Mirrativ: https://www.mirrativ.com/user/1927759
+        OPENREC: https://www.openrec.tv/live/23_official
     'いちから':
       Links:
         Twitter: https://twitter.com/Ichikara_Inc
@@ -33,6 +34,7 @@
       YouTube: https://www.youtube.com/channel/UCGCb4Dts1uYtciya3wvd6dg/live
       Mirrativ: https://www.mirrativ.com/user/2493817
       OPENREC: https://www.openrec.tv/live/iwataiki
+      Twitch: https://www.twitch.tv/iwataiki
   '一期二期':
     '月ノ美兎':
       Profile: https://twitter.com/MitoTsukino
@@ -105,7 +107,7 @@
         kakooyo: https://www.kakooyo.jp/user/profile/index/id/25303560
         OPENREC: https://www.openrec.tv/live/23_ichigoushimi
         'お父様': https://www.youtube.com/channel/UCQDMfH_hup1JiDVQdkMOJsw
-        'お母様(リンク切れ)': https://www.youtube.com/channel/UCuXIRoejZb9ijEhBNLP1cfQ
+        'お母様 (リンク切れ)': https://www.youtube.com/channel/UCuXIRoejZb9ijEhBNLP1cfQ
     '家長むぎ':
       Profile: https://twitter.com/ienaga_mugi23
       Links:
@@ -167,6 +169,7 @@
       Links:
         YouTube: https://www.youtube.com/channel/UCspv01oxUFf_MTSipURRhkA/live
         OPENREC: https://www.openrec.tv/live/23_kanae
+        "ChroNoir.tv": https://www.openrec.tv/live/chronoir
         Twitch: https://www.twitch.tv/kanae_2434
         'ニコニコ': http://www.nicovideo.jp/user/80646341
         Mirrativ: https://www.mirrativ.com/user/3034692
@@ -181,12 +184,14 @@
         YouTube: https://www.youtube.com/channel/UCoztvTULBYd3WmStqYeoHcA/live
         OPENREC: https://www.openrec.tv/live/23_sasakisaku
         'ニコニコ': http://www.nicovideo.jp/user/82910039
+        Mirrativ: https://www.mirrativ.com/user/3570945
     '闇夜乃モルル':
       Profile: https://twitter.com/_rnrrdark
       Links:
         YouTube: https://www.youtube.com/channel/UCNUgrFCo2Hr_VXc9bEwjcHQ/live
         Mirrativ: https://www.mirrativ.com/user/3262816
         OPENREC: https://www.openrec.tv/live/23_yamiyonomoruru
+        'ニコニコ': https://www.nicovideo.jp/user/85470020
     '本間ひまわり':
       Profile: https://twitter.com/honmahimawari
       Links:
@@ -198,18 +203,28 @@
       Profile: https://twitter.com/makaino_ririmu
       Links:
         YouTube: https://www.youtube.com/channel/UC9EjSJ8pvxtvPdxLOElv73w/live
+        Twitch: https://www.twitch.tv/makaino_ririmu
+        OPENREC: https://www.openrec.tv/live/23_makainoririmu
     '葛葉':
       Profile: https://twitter.com/Vamp_Kuzu
       Links:
         YouTube: https://www.youtube.com/channel/UCSFCh5NL4qXrAy9u-u2lX3g/live
+        "ChroNoir.tv": https://www.openrec.tv/live/chronoir
+        Mirrativ: https://www.mirrativ.com/user/2884922
+        OPENREC: https://www.openrec.tv/live/23_kuzuha
     '雪汝':
       Profile: https://twitter.com/setsuna2434
       Links:
         YouTube: https://www.youtube.com/channel/UCfM_A7lE6LkGrzx6_mOtI4g/live
+        OPENREC: https://www.openrec.tv/live/23_setsuna
+        'ニコニコ': https://www.nicovideo.jp/user/84484785
     '椎名唯華':
       Profile: https://twitter.com/yuika_siina
       Links:
         YouTube: https://www.youtube.com/channel/UC_4tXjqecqox5Uc05ncxpxg/live
+        Mirrativ: https://www.mirrativ.com/user/3827912
+        OPENREC: https://www.openrec.tv/live/23_shiinayuika
+        'ニコニコ': https://www.nicovideo.jp/user/85593277
   SEEDs (一部):
     'ドーラ':
       Profile: https://twitter.com/___Dola
