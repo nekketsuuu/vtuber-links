@@ -41,14 +41,14 @@
       {{- $child := $item.Value -}}
       {{- if $child.HasKey "Links" }}
         <li>
-          {{- if eq .Key "モイラ" -}}<div style="font-size: x-large;">{{- end -}}
+          {{- if $child.HasKey "Strong" -}}<div style="font-size: x-large;">{{- end -}}
           <strong>{{ template "ShowProfile" dict "Text" .Key "Attrs" $child }}</strong>
           {{- with $links := $child.Find "Links" -}}
             {{- range $i, $kv := $links -}}
               {{- if $i -}}, {{ else }}:&nbsp;{{ end }}<a href="{{ $kv.Value }}">{{ $kv.Key }}</a>
             {{- end -}}
           {{- end }}
-          {{- if eq .Key "モイラ" -}}</div>{{- end -}}
+          {{- if $child.HasKey "Strong" -}}</div>{{- end -}}
         </li>
       {{- else }}
         <li>
