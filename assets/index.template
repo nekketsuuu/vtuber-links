@@ -12,11 +12,10 @@
 <h1 id="title">バーチャルライバー生配信先自分用まとめ</h1>
 <p>敬称略</p>
 <ul>
-  {{/* type(.) is map[string]main.MapSlice */ -}}
-  {{- range $key, $value := . -}}
+  {{- range $item := . -}}
     <li>
-      {{ template "ShowProfile" dict "Text" $key "Attrs" $value }}
-      <ul>{{ template "ShowTree" $value }}</ul>
+      {{ template "ShowProfile" dict "Text" $item.Key "Attrs" $item.Value }}
+      <ul>{{ template "ShowTree" $item.Value }}</ul>
     </li>
   {{- end }}
 </ul>

@@ -4,11 +4,11 @@
    */}}
 {{- define "ShowProfile" -}}
   {{/* Actually, both types of .Text and .Attrs are interface{}. */}}
-  {{- if .Attrs.HasKey "Profile" -}}
-    {{- if .Attrs.IsSingleValue "Profile" -}}
-      <a href="{{ .Attrs.Find "Profile" }}">{{ .Text }}</a>
+  {{- if hasKey .Attrs "Profile" -}}
+    {{- if isSingleValue .Attrs "Profile" -}}
+      <a href="{{ find .Attrs "Profile" }}">{{ .Text }}</a>
     {{- else -}}
-      {{- $urls := .Attrs.Find "Profile" -}}
+      {{- $urls := find .Attrs "Profile" -}}
       {{- $len := len $urls -}}
       {{- if $len -}}
         <a href="{{ index $urls 0 }}">{{ .Text }}</a>
@@ -35,20 +35,20 @@
 
 {{/* ShowTree prints a tree structure defined by a yaml file */}}
 {{- define "ShowTree" -}}
-  {{- if .HasKey "Links" -}}
+  {{- if hasKey . "Links" -}}
   {{- else -}}
     {{- range $item := . }}
       {{- $child := $item.Value -}}
-      {{- if $child.HasKey "Links" }}
+      {{- if hasKey $child "Links" }}
         <li>
-          {{- if $child.HasKey "Strong" -}}<div style="font-size: x-large;">{{- end -}}
+          {{- if hasKey $child "Strong" -}}<div style="font-size: x-large;">{{- end -}}
           <strong>{{ template "ShowProfile" dict "Text" .Key "Attrs" $child }}</strong>
-          {{- with $links := $child.Find "Links" -}}
+          {{- with $links := find $child "Links" -}}
             {{- range $i, $kv := $links -}}
               {{- if $i -}}, {{ else }}:&nbsp;{{ end }}<a href="{{ $kv.Value }}">{{ $kv.Key }}</a>
             {{- end -}}
           {{- end }}
-          {{- if $child.HasKey "Strong" -}}</div>{{- end -}}
+          {{- if hasKey $child "Strong" -}}</div>{{- end -}}
         </li>
       {{- else }}
         <li>
