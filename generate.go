@@ -16,7 +16,7 @@ var (
 	dataYml   = filepath.Join("assets", "data.yml")
 	indexTpl  = filepath.Join("assets", "index.template")
 	defsTpl   = filepath.Join("assets", "defs.template")
-	indexHtml = filepath.Join("docs", "index.html")
+	indexHTML = filepath.Join("docs", "index.html")
 )
 
 // MapSlice is a wrapper of yaml.MapSlice
@@ -73,7 +73,7 @@ func main() {
 	err = yaml.Unmarshal(data, &db)
 	check(err)
 
-	output, err := os.Create(indexHtml)
+	output, err := os.Create(indexHTML)
 	check(err)
 	defer output.Close()
 
