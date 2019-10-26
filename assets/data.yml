@@ -24,16 +24,6 @@
       Links:
         Twitter: https://twitter.com/Ichikara_Inc
         YouTube: https://www.youtube.com/channel/UCJRTA8RcxW_T_VbMg4vgLsw
-  'いわなが':
-    Profile:
-      - https://twitter.com/iwataiki
-      - https://twitter.com/iwanagame
-    Links:
-      YouTube: https://www.youtube.com/channel/UCGCb4Dts1uYtciya3wvd6dg
-      'ツイキャス': https://twitcasting.tv/iwataiki
-      Mirrativ: https://www.mirrativ.com/user/2493817
-      OPENREC: https://www.openrec.tv/live/iwataiki
-      Twitch: https://www.twitch.tv/iwataiki
   '一期二期':
     'モイラ':
       Strong: true
@@ -82,13 +72,6 @@
         OPENREC: https://www.openrec.tv/live/23_sasakisaku
         'ニコニコ': http://www.nicovideo.jp/user/82910039
         Mirrativ: https://www.mirrativ.com/user/3570945
-    '闇夜乃モルル':
-      Profile: https://twitter.com/_rnrrdark
-      Links:
-        YouTube: https://www.youtube.com/channel/UCNUgrFCo2Hr_VXc9bEwjcHQ
-        Mirrativ: https://www.mirrativ.com/user/3262816
-        OPENREC: https://www.openrec.tv/live/23_yamiyonomoruru
-        'ニコニコ': https://www.nicovideo.jp/user/85470020
     '本間ひまわり':
       Profile: https://twitter.com/honmahimawari
       Links:
@@ -109,12 +92,6 @@
         "ChroNoir.tv": https://www.openrec.tv/live/chronoir
         Mirrativ: https://www.mirrativ.com/user/2884922
         OPENREC: https://www.openrec.tv/live/23_kuzuha
-    '雪汝':
-      Profile: https://twitter.com/setsuna2434
-      Links:
-        YouTube: https://www.youtube.com/channel/UCfM_A7lE6LkGrzx6_mOtI4g
-        OPENREC: https://www.openrec.tv/live/23_setsuna
-        'ニコニコ': https://www.nicovideo.jp/user/84484785
     '椎名唯華':
       Profile: https://twitter.com/yuika_siina
       Links:
@@ -130,7 +107,6 @@
         '再生リストリスト': https://www.youtube.com/channel/UCt5-0i4AVHXaWJrL8Wql3mw/playlists
         'YouTubeサブ': https://www.youtube.com/channel/UCTi_rzf5QIkXjhJjkbcAdTg
         'ツイキャス': https://twitcasting.tv/midori_2434
-        bilibili: https://space.bilibili.com/403930401/
         'bilibili生': https://live.bilibili.com/21302479
         TikTok: https://www.tiktok.com/@MS4wLjABAAAAlZEhf-8EzoMYp5rA8RzW6p2KJ-ateRJrjVc9Eee_RqIPQwUNRDOr1SbefBdhTc8V
         Mirrativ: https://www.mirrativ.com/user/3295334
@@ -158,6 +134,7 @@
         Mirrativ: https://www.mirrativ.com/user/4069425
         OPENREC: https://www.openrec.tv/live/23_machitachima
         'ニコニコ': https://www.nicovideo.jp/user/86110591
+        nana: https://nana-music.com/users/8175649
     'ベルモンド・バンデラス':
       Profile: https://twitter.com/belmond_b_2434
       Links:
@@ -186,13 +163,18 @@
       Profile: https://twitter.com/Lize_Helesta
       Links:
         YouTube: https://www.youtube.com/channel/UCZ1xuCK1kNmn5RzPYIZop3w
-        bilibili: http://space.bilibili.com/436596841
         'bilibili生': https://live.bilibili.com/21463249
         OPENREC: https://www.openrec.tv/live/23_lizehelesta
     '葉山舞鈴':
       Profile: https://twitter.com/Hayama_Marin
       Links:
         YouTube: https://www.youtube.com/channel/UCfipDDn7wY-C-SoUChgxCQQ
+        OPENREC: https://www.openrec.tv/live/23_hayamamarin
+    'アルス・アルマル':
+      Profile: https://twitter.com/ars_almal
+      Links:
+        YouTube: https://www.youtube.com/channel/UCdpUojq0KWZCN9bxXnZwz5w
+        OPENREC: https://www.openrec.tv/live/23_ars_almal
 'その他':
   '名取さな':
     Profile: https://twitter.com/sana_natori
